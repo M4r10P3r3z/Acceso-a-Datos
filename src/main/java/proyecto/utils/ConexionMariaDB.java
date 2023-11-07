@@ -48,7 +48,7 @@ public class ConexionMariaDB {
             throw new SQLException("Error al crear la base de datos");
         }
     }
-    private static void borrarTablaBBDD() {
+    public static void borrarTablaBBDD() {
         String sentenciaSqlString = "drop table if exists datos;";
         try (Statement sentenciaSql = conn.createStatement()) {
             sentenciaSql.execute(sentenciaSqlString);
@@ -60,7 +60,6 @@ public class ConexionMariaDB {
         if (conn!=null) {
             try {
                 conn.close();
-                System.out.println("Cerrando la conexión");
             } catch (SQLException e) {
                 System.out.println("No se puede cerrar la conexión con la BBDD");
             }

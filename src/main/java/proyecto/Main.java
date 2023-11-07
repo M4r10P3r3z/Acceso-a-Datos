@@ -16,6 +16,7 @@ public class Main {
         try {
             XMLClass.xmlToBBDD(Propiedades.getPropiedad("PATH_READ_XML"));
             XMLClass.BBDDToXml(Propiedades.getPropiedad("PATH_WRITE_XML"));
+            System.out.println("Programa Terminado correctamente");
         } catch (XPathExpressionException | IOException | SAXException | ParserConfigurationException |
                  ClassNotFoundException | SQLException e) {
             System.out.println("Error: " + e.getMessage());
