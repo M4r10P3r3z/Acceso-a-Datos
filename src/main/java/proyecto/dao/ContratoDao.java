@@ -30,8 +30,7 @@ public class ContratoDao {
         }
     }
     public ResultSet obtenerDatos() throws SQLException {
-        String sentenciaSqlString = "select NIF, ADJUDICATARIO, OBJETO_GENERICO, " +
-                "OBJETO, FECHA_DE_ADJUDICACION, IMPORTE, PROVEEDORES_CONSULTADOS from datos;";
+        String sentenciaSqlString = "select * from datos;";
         try (Statement selectSql = conn.createStatement()) {
             return selectSql.executeQuery(sentenciaSqlString);
         } catch (SQLException e) {

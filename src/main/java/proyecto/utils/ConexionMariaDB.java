@@ -48,7 +48,7 @@ public class ConexionMariaDB {
             throw new SQLException("Error al crear la base de datos");
         }
     }
-    private static void borrarTablaBBDD() {
+    public static void borrarTablaBBDD() {
         String sentenciaSqlString = "drop table if exists datos;";
         try (Statement sentenciaSql = conn.createStatement()) {
             sentenciaSql.execute(sentenciaSqlString);
